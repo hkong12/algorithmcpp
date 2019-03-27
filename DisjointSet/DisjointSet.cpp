@@ -29,6 +29,7 @@ DisjointSet::DisjointSet(int n) {
 
 void DisjointSet::setUnion(SetType root1, SetType root2) {
     // Union-by-size: always change the root of the smaller tree
+    // (optional) union-by-rank: rank is the estimated height of each tree
 
     if (sarr[root1] <= sarr[root2]) {
         sarr[root1] += sarr[root2];
