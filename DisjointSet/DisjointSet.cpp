@@ -52,11 +52,11 @@ SetType DisjointSet::find(ElementType x) {
 
 int main() {
     DisjointSet* disjSet = new DisjointSet(10);
-    disjSet->setUnion(5,6);
-    disjSet->setUnion(7,8);
-    disjSet->setUnion(5, disjSet->find(8));
-    disjSet->setUnion(4, disjSet->find(8));
-    disjSet->setUnion(2,3);
+    disjSet->setUnion(disjSet->find(5), disjSet->find(6));
+    disjSet->setUnion(disjSet->find(7), disjSet->find(8));
+    disjSet->setUnion(disjSet->find(5), disjSet->find(8));
+    disjSet->setUnion(disjSet->find(4), disjSet->find(8));
+    disjSet->setUnion(disjSet->find(2),disjSet->find(3));
     for (int i = 1; i <= 10; ++i) {
         printf("%d:%d\n", i, disjSet->find(i));
     }
