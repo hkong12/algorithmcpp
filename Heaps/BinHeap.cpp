@@ -1,5 +1,4 @@
 #include <cstdio>
-#include "BinHeap.hpp"
 using namespace std;
 
 // A binary heap is a binary tree that is completely filled and satisfy heap order property.
