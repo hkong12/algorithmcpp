@@ -34,7 +34,6 @@ void heapSort(int n, int arr[]) {
         swap(arr[i], arr[0]);
         percDown(i, 0, arr);
     }
-
 }
 
 int main () {
