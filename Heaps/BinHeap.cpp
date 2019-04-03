@@ -32,7 +32,7 @@ BinHeap::BinHeap(int cap) {
 }
 
 BinHeap::~BinHeap() {
-    delete harr;
+    delete [] harr;
 }
 
 void BinHeap::buildHeap(int n, int* arr) {
