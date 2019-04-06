@@ -6,6 +6,7 @@ using namespace std;
 
 // A topological sort is an ordering of vertices in a directed acyclic graph, such that if there is a path from v_i to v_j, then v_j appears after v_i in the ordering. It's clear that a topological ordering is not possible if the graph has a cycle
 // A simple algorithm to find a topological ordering is first to find any vertex with no incoming edges. We can then print this vertex, and remove it, along with its edges, from the graph. Then we apply this same stragegy to the rest of the graph.
+// The time to perform the algorithm is O(|E|+|V|).
 
 class Graph {
     int V;                          // number of vertices
