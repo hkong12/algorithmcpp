@@ -5,6 +5,7 @@ using namespace std;
 
 // The unweigted shortest-path problem is given as an in put a unweighted graph, G=(V,E), and a distinguished vertex, s, find the shortest path from s to every other vertex in G.
 // We use the breadth-first search strategy to find the shortest-path in unweighted graph. It operates by processing vertices in layers: the vertices closest to the start are evealuated first, and the most distant vertices are evaluated last.
+// The running time is O(|E|+|V|).
 
 struct Record
 {
@@ -23,6 +24,7 @@ public:
     ~Graph();                       // deconstructor
     void addEdge(int v, int w);     // function to add an edge to the graph
     void shortestPath(int s);       // function to find the shortest path from s to every other vertex
+    void printPath(int v);               // function to print the path recursively
 };
 
 Graph::Graph(int v) {
@@ -52,14 +54,13 @@ void Graph::shortestPath(int s) {
     q.push(s);
     tb[s].visited = true;
     tb[s].dist = 0;
-    tb[s].path = -1;
+    tb[s].path = s;
 
     int count = 0;
     while (!q.empty()) {
         int v = q.front();
         q.pop();
         
-        // printf("%d-dist:%d-path:%d\n", v, tb[v].dist, tb[v].path);
         for (auto w : adj[v]) {
             if (!tb[w].visited) {
                 q.push(w);
@@ -76,6 +77,18 @@ void Graph::shortestPath(int s) {
     }
 }
 
+void Graph::printPath(int v) {
+    if (!tb[v].visited) {
+        printf("%d is not visited.", v);
+        return;
+    }
+    if (tb[v].path != v) {
+        this->printPath(tb[v].path);
+        printf(" to ");
+    }
+    printf("%d", tb[v].path);
+}
+
 int main() 
 { 
     // Create a graph given in the above diagram 
@@ -89,6 +102,11 @@ int main()
   
     printf("Following is to find the shortest path from source 5 of the given unweighted graph \n"); 
     g.shortestPath(5); 
+
+    for (int i = 0; i < 6; i++) {
+        g.printPath(i);
+        printf("\n");
+    }
   
     return 0; 
 } 
