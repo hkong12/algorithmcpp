@@ -1,1 +1,44 @@
 #algorithmcpp
+
+- Simple Data Structures
+    - [ ] List
+    - [ ] Stack
+    - [ ] Queue
+- Trees
+    - [ ] Binary Tree
+    - [ ] Binary Search Tree
+    - [ ] AVL Tree
+    - [ ] Splay Tree
+    - [ ] B-Trees
+- Heaps
+    - [x] Binary Heap
+    - [ ] d-Heaps
+    - [ ] Leftist Heap
+    - [ ] Skew Heap
+    - [ ] Binomial Queues
+- Sorting
+    - [ ] Insertion Sort
+    - [x] Shellsort
+    - [x] Heapsort
+    - [x] Mergesort
+    - [x] Quicksort
+    - [ ] Bucket Sort
+    - [ ] Radix Sort
+    - [ ] External Sorting
+- Hashing
+    - [ ] ...
+- Disjoint Set
+    - [x] Disjoint Set
+- Graph Algorithm
+    - [x] Topology Sort
+    - [ ] Shortest-Path Algorithm
+        - [ ] Unweighted Shortest Path
+        - [ ] Dijkstra's Algorithm
+        - [ ] ... 
+    - [ ] Network Flow Algorithm
+- Algorithm
+  - [ ] Greedy Algorithm
+  - [ ] Divide and Conquer
+  - [ ] Dynamic Programming
+  - [ ] Randomized Algorithms
+  - [ ] Backtracking Algorithms
